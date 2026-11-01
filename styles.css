@@ -326,6 +326,7 @@ body > footer a{color:var(--berry);font-weight:500}
   .cards{grid-template-columns:repeat(4,1fr)}
   .demo-grid{grid-template-columns:1.2fr .8fr;gap:64px}
   .feats{grid-template-columns:repeat(2,1fr)}
+  .feat:last-child:nth-child(odd){grid-column:1/-1}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
