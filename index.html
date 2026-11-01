@@ -103,8 +103,6 @@
     <div class="hero-art" data-parallax>
       <div class="hero-media">
         <img class="hero-img" src="/assets/img/hero-explosao-alimentos-900.webp" srcset="/assets/img/hero-explosao-alimentos-900.webp 900w, /assets/img/hero-explosao-alimentos.webp 1680w" sizes="(min-width:900px) 55vw, 100vw" width="1680" height="944" fetchpriority="high" decoding="async" alt="Morangos, banana, mirtilos, cenoura e pão saltando de uma lancheira rosa, sobre fundo cor de pêssego">
-        <!-- Slot de vídeo: só aparece quando assets/video/hero.mp4 existir (ver assets/video/LEIA-ME.md) -->
-        <video class="hero-video" data-video="off" muted loop playsinline preload="none" poster="/assets/img/hero-explosao-alimentos-900.webp" data-src-webm="/assets/video/hero.webm" data-src-mp4="/assets/video/hero.mp4" aria-hidden="true" tabindex="-1"></video>
       </div>
       <div class="burst" aria-hidden="true">
         <span class="ing" style="--x:-300px;--y:-200px;--r:-25deg;--d:.05s;--z:1.2"><img src="/assets/img/ingredientes/morango.svg" width="64" height="64" alt=""></span>
@@ -202,20 +200,16 @@
   </div>
 </section>
 
-<!-- VIDEO 30s -->
+<!-- COMO FUNCIONA -->
 <section id="video" class="sec sec-verde" aria-labelledby="t-video">
   <svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 20c240 40 480 40 720 10s480-30 720 10v20H0z"/></svg>
   <div class="container video-grid">
     <div>
       <p class="eyebrow">Por dentro</p>
-      <h2 id="t-video" class="reveal">Veja o app em 30 segundos</h2>
+      <h2 id="t-video" class="reveal">Veja como funciona</h2>
       <p class="section-lead">Escolha a idade, abra a geladeira e pronto: a receita aparece. Se bater a dúvida, pergunte pra Nutri IA.</p>
-      <div class="video-slot reveal" data-video-slot data-video="off">
-        <!-- Quando existir assets/video/passo-a-passo.mp4, o app.js troca este placeholder pelo vídeo. -->
-        <div class="video-ph">
-          <span class="play" aria-hidden="true"><svg><use href="#i-play"/></svg></span>
-          <p><strong>Vídeo chegando em breve</strong><br>Enquanto isso, me chama no Instagram que eu te mostro.</p>
-        </div>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://ig.me/m/lancheirasepapinhas" target="_blank" rel="noopener" data-cta="como-funciona">Quero testar grátis</a>
       </div>
     </div>
 
@@ -267,7 +261,7 @@
     <ol class="steps">
       <li class="reveal"><h3>Peça seu acesso</h3><p>Chame a gente no direct do Instagram ou comente QUERO no post de lançamento.</p></li>
       <li class="reveal"><h3>Receba o link</h3><p>Eu mesma envio o acesso pelo direct.</p></li>
-      <li class="reveal"><h3>Salve na tela inicial</h3><p>Abra no navegador do celular e adicione à tela inicial: ele fica igualzinho a um app. O vídeo do passo a passo vai ficar na seção “Veja o app em 30 segundos”.</p></li>
+      <li class="reveal"><h3>Salve na tela inicial</h3><p>Abra no navegador do celular e adicione à tela inicial: ele fica igualzinho a um app.</p></li>
       <li class="reveal"><h3>Cadastre seu filho e conte o que achou</h3><p>No teste dá pra cadastrar um filho e acessar tudo. O seu feedback decide o que vem a seguir.</p></li>
     </ol>
     <div class="cta-row">
@@ -276,22 +270,25 @@
   </div>
 </section>
 
-<!-- PROVA SOCIAL -->
+<!-- PROVA SOCIAL: oculta até chegarem depoimentos reais. Para ativar: apague a linha de abertura de comentário logo abaixo e a de fechamento no fim do bloco, e troque os marcadores ~~ por traços. -->
+<!--
 <section class="sec sec-rosa" aria-labelledby="t-prova">
   <svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40c240-40 480-40 720-10s480 30 720-10v40H0z"/></svg>
   <div class="container">
     <p class="eyebrow">Quem já está testando</p>
     <h2 id="t-prova" class="reveal">O que as mães estão dizendo</h2>
     <div class="quotes">
-      <!-- TROCAR POR DEPOIMENTO REAL -->
+      <!~~ TROCAR POR DEPOIMENTO REAL ~~>
       <blockquote class="quote reveal"><span class="sample">Exemplo</span><p>“Espaço reservado para o depoimento de uma mãe do teste, contando como foi usar a aba Geladeira.”</p><footer>Mãe participante do teste</footer></blockquote>
-      <!-- TROCAR POR DEPOIMENTO REAL -->
+      <!~~ TROCAR POR DEPOIMENTO REAL ~~>
       <blockquote class="quote reveal"><span class="sample">Exemplo</span><p>“Espaço reservado para o depoimento sobre a introdução alimentar e as papinhas por idade.”</p><footer>Mãe participante do teste</footer></blockquote>
-      <!-- TROCAR POR DEPOIMENTO REAL -->
+      <!~~ TROCAR POR DEPOIMENTO REAL ~~>
       <blockquote class="quote reveal"><span class="sample">Exemplo</span><p>“Espaço reservado para o depoimento sobre a lancheira da escola e a Nutri IA.”</p><footer>Mãe participante do teste</footer></blockquote>
     </div>
   </div>
 </section>
+
+-->
 
 <!-- QUEM CRIOU -->
 <section id="quem" class="sec sec-papel" aria-labelledby="t-quem">

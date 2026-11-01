@@ -32,28 +32,6 @@
     }
   }
 
-  // Vídeos opcionais: só entram se o arquivo existir (sem quebrar o layout)
-  // O build.sh troca data-video="off" por "on" quando o arquivo existe em assets/video/
-  function exists(el) { return Promise.resolve(el.getAttribute('data-video') === 'on'); }
-  var hv = d.querySelector('.hero-video');
-  if (hv && !reduce) {
-    exists(hv).then(function (ok) {
-      if (!ok) return;
-      [['webm', hv.dataset.srcWebm], ['mp4', hv.dataset.srcMp4]].forEach(function (s) {
-        var src = d.createElement('source'); src.src = s[1]; src.type = 'video/' + s[0]; hv.appendChild(src);
-      });
-      hv.addEventListener('playing', function () { hv.classList.add('ready'); });
-      hv.load(); hv.play().catch(function () {});
-    });
-  }
-  var slot = d.querySelector('[data-video-slot]');
-  if (slot) {
-    exists(slot).then(function (ok) {
-      if (!ok) return;
-      slot.innerHTML = '<video controls playsinline preload="metadata" poster="/assets/img/hero-explosao-alimentos-900.webp"><source src="/assets/video/passo-a-passo.mp4" type="video/mp4"></video>';
-    });
-  }
-
   // Barra fixa de CTA no celular: aparece depois do hero, some no rodapé
   var bar = d.querySelector('[data-sticky]'), hero = d.querySelector('.hero'), foot = d.querySelector('.site-footer'), fin = d.querySelector('.final');
   if (bar && hero && hasIO) {

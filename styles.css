@@ -65,9 +65,7 @@ h1 em{display:block;font-style:italic;font-weight:600;color:var(--accent)}
 
 .hero-art{position:relative;--px:0;--py:0}
 .hero-media{position:relative;border-radius:32px;overflow:hidden;box-shadow:var(--shadow);aspect-ratio:1680/944;background:#F6C9A9;transform:translate3d(calc(var(--px)*-8px),calc(var(--py)*-8px),0);transition:transform .2s ease-out}
-.hero-img,.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.hero-video{opacity:0;transition:opacity .6s}
-.hero-video.ready{opacity:1}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .burst{position:absolute;left:68%;top:62%;width:0;height:0;pointer-events:none;transform:translate3d(calc(var(--px)*18px),calc(var(--py)*18px),0);transition:transform .2s ease-out}
 .ing{position:absolute;left:-40px;top:-40px;width:80px;height:80px;transform:translate(var(--x),var(--y)) rotate(var(--r));filter:drop-shadow(0 8px 10px rgba(90,40,30,.22))}
 .ing.sm{width:54px;height:54px;left:-27px;top:-27px}
@@ -133,16 +131,8 @@ h2{font-size:clamp(2rem,6.4vw,3.2rem);line-height:1.06;font-weight:700;margin-to
 .timeline strong{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--leaf-deep)}
 .timeline span:last-child{font-size:1.05rem}
 
-/* video */
+/* como funciona */
 .video-grid{display:grid;gap:40px;align-items:center}
-.video-slot{margin-top:26px;border-radius:28px;overflow:hidden;background:var(--berry-deep);aspect-ratio:16/9;position:relative;box-shadow:var(--shadow)}
-.video-slot video{width:100%;height:100%;object-fit:cover;display:block}
-.video-ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:14px;padding:20px;color:#F7ECE8;background:radial-gradient(circle at 30% 20%,#8A4030,#3A1F18 70%)}
-.video-ph p{margin:0;font-size:1rem}
-.play{width:72px;height:72px;border-radius:50%;background:var(--cream);display:flex;align-items:center;justify-content:center}
-.play svg{width:30px;height:30px;fill:var(--berry);margin-left:4px}
-.motion .play{animation:pulse-play 2.4s ease-in-out infinite}
-@keyframes pulse-play{50%{transform:scale(1.08)}}
 
 /* phone */
 .phone{width:min(330px,86vw);margin:0 auto;border:10px solid #2B1D1A;border-radius:54px;background:var(--paper);padding:22px 16px;display:flex;flex-direction:column;gap:12px;box-shadow:0 30px 60px rgba(90,40,30,.25)}
