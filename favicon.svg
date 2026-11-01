@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="52%" r="50%">
+      <stop offset="0%" stop-color="#EEF0C9"/>
+      <stop offset="70%" stop-color="#E8EBC4"/>
+      <stop offset="100%" stop-color="#F1ECDD"/>
+    </radialGradient>
+    <linearGradient id="berry" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8A4030"/>
+      <stop offset="100%" stop-color="#7A3A2C"/>
+    </linearGradient>
+  </defs>
+  <rect width="1024" height="1024" fill="#F4EAE7"/>
+  <circle cx="512" cy="540" r="400" fill="url(#glow)"/>
+  <!-- haste -->
+  <path d="M512 330 C 510 290, 514 260, 520 236" stroke="#4E6B3A" stroke-width="22" stroke-linecap="round" fill="none"/>
+  <!-- morango -->
+  <path d="M512 340 C 380 330, 296 410, 308 530 C 320 650, 430 748, 512 800 C 594 748, 704 650, 716 530 C 728 410, 644 330, 512 340 Z" fill="url(#berry)"/>
+  <!-- folhas -->
+  <path d="M512 352 C 470 320, 410 330, 372 372 C 420 380, 470 376, 512 352 Z" fill="#5C8040"/>
+  <path d="M512 352 C 554 320, 614 330, 652 372 C 604 380, 554 376, 512 352 Z" fill="#5C8040"/>
+  <path d="M512 352 C 490 372, 478 400, 484 424 C 500 410, 512 386, 512 352 Z" fill="#4E7035"/>
+  <path d="M512 352 C 534 372, 546 400, 540 424 C 524 410, 512 386, 512 352 Z" fill="#4E7035"/>
+  <!-- sementes -->
+  <g fill="#FFFFFF">
+    <ellipse cx="432" cy="470" rx="11" ry="17" transform="rotate(-20 432 470)"/>
+    <ellipse cx="512" cy="470" rx="11" ry="17"/>
+    <ellipse cx="592" cy="470" rx="11" ry="17" transform="rotate(20 592 470)"/>
+    <ellipse cx="392" cy="560" rx="11" ry="17" transform="rotate(-25 392 560)"/>
+    <ellipse cx="472" cy="548" rx="11" ry="17" transform="rotate(-8 472 548)"/>
+    <ellipse cx="552" cy="548" rx="11" ry="17" transform="rotate(8 552 548)"/>
+    <ellipse cx="632" cy="560" rx="11" ry="17" transform="rotate(25 632 560)"/>
+    <ellipse cx="432" cy="635" rx="11" ry="17" transform="rotate(-18 432 635)"/>
+    <ellipse cx="512" cy="628" rx="11" ry="17"/>
+    <ellipse cx="592" cy="635" rx="11" ry="17" transform="rotate(18 592 635)"/>
+    <ellipse cx="512" cy="714" rx="11" ry="17"/>
+  </g>
+</svg>
