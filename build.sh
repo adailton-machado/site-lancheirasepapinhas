@@ -6,7 +6,7 @@
 #   3) placeholder do mesmo tamanho (o site nunca quebra)
 set -e
 rm -rf out && mkdir -p out/assets/img
-cp index.html privacidade.html styles.css app.js favicon.svg apple-touch-icon.png out/
+cp index.html privacidade.html termos.html styles.css app.js favicon.svg apple-touch-icon.png out/
 cp -r assets/img/ingredientes out/assets/img/
 
 URL_HERO="${IMG_HERO:-}"
