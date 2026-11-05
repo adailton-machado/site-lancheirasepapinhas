@@ -13,6 +13,22 @@
     d.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
   }
 
+  // Vídeos do app: tocam só quando aparecem na tela; com movimento reduzido ficam no poster, com controles
+  var vids = d.querySelectorAll('video.appvid');
+  if (vids.length) {
+    if (reduce || !hasIO) {
+      vids.forEach(function (v) { v.controls = true; v.loop = false; });
+    } else {
+      var vio = new IntersectionObserver(function (es) {
+        es.forEach(function (e) {
+          var v = e.target;
+          if (e.isIntersecting) { var p = v.play(); if (p && p.catch) p.catch(function () {}); } else { v.pause(); }
+        });
+      }, { threshold: .4 });
+      vids.forEach(function (v) { v.muted = true; vio.observe(v); });
+    }
+  }
+
   // Parallax sutil no hero (mouse no desktop, giro do celular no mobile)
   var art = d.querySelector('[data-parallax]');
   if (art && !reduce) {

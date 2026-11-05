@@ -8,6 +8,8 @@ set -e
 rm -rf out && mkdir -p out/assets/img
 cp index.html privacidade.html termos.html styles.css app.js favicon.svg apple-touch-icon.png out/
 cp -r assets/img/ingredientes out/assets/img/
+cp assets/img/app-*.webp out/assets/img/
+mkdir -p out/assets/video && cp assets/video/* out/assets/video/
 
 URL_HERO="${IMG_HERO:-}"
 URL_CRIANCAS="${IMG_CRIANCAS:-}"
