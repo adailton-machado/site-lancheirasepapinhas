@@ -243,14 +243,16 @@ details p{margin:0 0 20px;color:var(--muted);font-size:1.02rem}
 
 /* final */
 .final{padding:24px 0 80px;background:var(--cream)}
-.final-box{position:relative;background:var(--berry);color:#fff;border-radius:40px;padding:52px 28px;text-align:center;overflow:hidden}
+.final-box{position:relative;background:var(--berry);color:#fff;border-radius:40px;padding:76px 28px 72px;text-align:center;overflow:hidden}
 .final-box h2{color:#fff;position:relative}
 .final-box p{position:relative;margin:14px auto 0;max-width:46ch;color:#F4EAE7;font-size:1.15rem}
 .final-box .btn{position:relative;margin-top:26px}
-.final-ing{position:absolute;width:56px;height:56px;opacity:.9}
-.final-ing.a{left:6%;top:14%;transform:rotate(-18deg)}
-.final-ing.b{right:7%;top:18%;transform:rotate(14deg)}
-.final-ing.c{right:12%;bottom:10%;transform:rotate(-30deg)}
+.final-ing{position:absolute;z-index:1;width:44px;height:44px;pointer-events:none;filter:drop-shadow(0 6px 8px rgba(0,0,0,.18))}
+.final-ing.a{left:16px;top:14px;transform:rotate(-18deg)}
+.final-ing.b{right:16px;top:14px;transform:rotate(14deg)}
+.final-ing.c{right:18px;bottom:16px;transform:rotate(-30deg)}
+.final-ing.d{left:18px;bottom:18px;transform:rotate(10deg)}
+.final-ing.e{left:64px;top:22px;width:32px;height:32px;transform:rotate(-40deg)}
 
 .site-footer{padding:36px 0 110px;border-top:1px solid var(--line);font-size:.95rem;color:var(--muted)}
 .site-footer .container{display:grid;gap:18px}
@@ -314,6 +316,13 @@ body > footer a{color:var(--berry);font-weight:500}
   .plans{grid-template-columns:repeat(2,1fr)}
   .roadmap{grid-template-columns:1fr 1fr}
   .final-box{padding:72px 48px}
+  .final-ing{width:64px;height:64px}
+  .final-ing.a{left:32px;top:28px}
+  .final-ing.b{right:36px;top:30px}
+  .final-ing.c{right:40px;bottom:30px}
+  .final-ing.d{left:40px;bottom:32px}
+  .final-ing.e{left:104px;top:40px;width:40px;height:40px}
+  .final-box h2{max-width:20ch;margin-left:auto;margin-right:auto}
   .site-footer{padding-bottom:48px}
   .site-footer .container{grid-template-columns:1fr auto;align-items:start}
   .site-footer .disclaimer{grid-column:1/-1}
