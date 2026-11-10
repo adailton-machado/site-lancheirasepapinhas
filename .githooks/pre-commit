@@ -1,0 +1,3 @@
+#!/bin/sh
+# Barra commits com segredos. Ver tools/checar-segredos.js
+node tools/checar-segredos.js || exit 1
