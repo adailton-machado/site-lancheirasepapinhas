@@ -23,12 +23,34 @@
     };
     if (matchMedia('(hover: hover) and (pointer: fine)').matches) {
       window.addEventListener('mousemove', function (e) { set(e.clientX / innerWidth - .5, e.clientY / innerHeight - .5); }, { passive: true });
+      // 3 camadas de frutinhas sobem em velocidades diferentes ao rolar (só no computador)
+      var sraf = 0, onScroll = function () {
+        if (sraf) return;
+        sraf = requestAnimationFrame(function () { sraf = 0; var y = window.scrollY; if (y < 1200) art.style.setProperty('--sy', y.toFixed(0)); });
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
     } else {
       window.addEventListener('deviceorientation', function (e) {
         if (e.gamma == null) return;
         set(Math.max(-1, Math.min(1, e.gamma / 30)) * .5, Math.max(-1, Math.min(1, (e.beta - 45) / 30)) * .5);
       }, { passive: true });
     }
+  }
+
+  // Cartões que inclinam até 6 graus seguindo o mouse (só com mouse; no toque, afundam 2 px pelo CSS)
+  if (!reduce && window.matchMedia && matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    d.querySelectorAll('[data-tilt]').forEach(function (el) {
+      var r = 0;
+      el.addEventListener('pointermove', function (e) {
+        if (r) return;
+        r = requestAnimationFrame(function () {
+          r = 0; var b = el.getBoundingClientRect(), x = (e.clientX - b.left) / b.width - .5, y = (e.clientY - b.top) / b.height - .5;
+          el.classList.add('tilting');
+          el.style.transform = 'perspective(900px) rotateX(' + (-y * 6).toFixed(2) + 'deg) rotateY(' + (x * 6).toFixed(2) + 'deg) translateY(-4px)';
+        });
+      });
+      el.addEventListener('pointerleave', function () { el.classList.remove('tilting'); el.style.transform = ''; });
+    });
   }
 
   // UTM: repassa utm_*, gclid e fbclid da página para todos os links do app
