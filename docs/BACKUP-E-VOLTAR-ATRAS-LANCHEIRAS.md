@@ -63,3 +63,14 @@ A cópia `backup_20261110` fica dentro do mesmo projeto, então ela **não prote
 ## Quando refazer o backup
 
 Refaça antes de qualquer mudança que mexa no banco. Peça ao Claude: "refaça o backup do Supabase do Lancheiras com a data de hoje".
+
+## Redesign publicado em 10/11/2026 (redesign-v1)
+
+| Parte | Versão nova no ar | Para voltar ao visual antigo |
+|---|---|---|
+| **App** (`lancheiras-app-v6`) | `dpl_CjGi548TPiPF96tCNyzqQxGQX4C5` (commit `88ca911`, com "Entrar com Google") | `dpl_Cfh9brkWTctgzxz4EkydQJjDdKTU` (Caso 1) |
+| **Site** (`site-lancheirasepapinhas`) | `dpl_2aeGY1rmkDnjkSiPshbSqbDnA9gi` (commit `1816a08`) | `dpl_CC7gDbMvPia5t1ox5cMBgwcz488b` (Caso 1) |
+
+No GitHub, o estado publicado está na branch `backup/redesign-v1` de cada repositório, e o estado anterior em `backup/antes-do-redesign`.
+
+**Entrar com Google:** ligado no Supabase (Authentication > Providers > Google). Para desligar, basta desativar o Google lá: o botão some sozinho do app, sem precisar publicar nada.
